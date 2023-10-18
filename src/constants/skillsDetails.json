@@ -1,0 +1,21 @@
+{
+    "skillsArray": [
+        { "skill": "REACTJS", "rating": 9 },
+        { "skill": "NEXTJS", "rating": 8 },
+        { "skill": "REACT NATIVE", "rating": 7 },
+        { "skill": "MONGODB", "rating": 8 },
+        { "skill": "EXPRESSJS", "rating": 7 },
+        { "skill": "NESTJS", "rating": 7 },
+        { "skill": "NODEJS", "rating": 8 },
+        { "skill": "JAVASCRIPT", "rating": 9 },
+        { "skill": "HTML", "rating": 9 },
+        { "skill": "CSS", "rating": 9 },
+        { "skill": "TAILWIND", "rating": 7 },
+        { "skill": "SASS", "rating": 7 },
+        { "skill": "SQL", "rating": 8 },
+        { "skill": "REDUX", "rating": 9 },
+        { "skill": "RECOIL", "rating": 9 },
+        { "skill": "REST API", "rating": 9 },
+        { "skill": "TYPESCRIPT", "rating": 8 }
+    ]
+}

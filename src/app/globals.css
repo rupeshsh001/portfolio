@@ -2,26 +2,125 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.animated-heading {
+    display: inline-block;
+    letter-spacing: 5px;
+    font-size: 32px;
+    position: relative;
+    white-space: nowrap;
+    letter-spacing: 5px;
+    color: transparent;
+    font-weight: 600;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #01b2f2;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.animated-heading::before {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    color: #01b2f2;
+    border-right: 3px solid #01b2f2;
+    animation: effect 3s linear infinite;
+    overflow: hidden;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.btn-css {
+    padding: 8px 20px;
+    border: 1px solid #01b2f2;
+    color: #01b2f2;
+    border-radius: 6px;
+    position: relative;
+    overflow: hidden;
+    text-transform: uppercase;
+}
+
+.btn-css::before {
+    content: "";
+    position: absolute;
+    left: -100%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #01b2f2;
+    z-index: -1;
+}
+
+.btn-css:hover::before {
+    left: 0;
+    transition: all 0.5s;
+}
+
+.btn-css:hover {
+    color: #fff;
+}
+
+.project-card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.project-card::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    left: -20px;
+    top: -10px;
+    background-color: #fff;
+}
+
+.project-card::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: -12.5px;
+    width: 5px;
+    height: 100%;
+    border-left: 5px dashed #01b2f2;
+}
+
+@keyframes effect {
+    0% {
+        width: 0;
+    }
+
+    80% {
+        width: 100%;
+    }
+
+    100% {
+        width: 0;
+    }
+}
+
+@layer components {
+    .nav-btn {
+        @apply hover:text-secondary transition-all duration-200 hover:translate-y-[-2px] cursor-pointer uppercase;
+    }
+
+    .btn {
+        @apply px-5 text-tertiary bg-secondary border border-secondary py-3 rounded-md;
+    }
+
+    .make-it-center {
+        @apply absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2;
+    }
+
+    .project-timeline {
+        @apply text-secondary font-bold ml-1;
+    }
+
+    .input-box {
+        @apply bg-primary border-2 border-secondary focus:outline-none p-2 placeholder-secondary text-secondary w-full sm:w-[300px];
+    }
+
+    .input-box-error {
+        @apply bg-primary border-2 border-red-500 focus:outline-none p-2 placeholder-red-500 text-red-500 w-full sm:w-[300px];
+    }
 }

@@ -1,0 +1,46 @@
+{
+    "ProjectsDetails": [
+        {
+            "companyName": "Valuebound",
+            "clientName": "clear one",
+            "from": "2023",
+            "till": "Present",
+            "keyResponsibilities": [
+                "Worked as Frontend Developer.",
+                "Utilized NEXTJS as the primary framework.",
+                "Working on state management using RECOIL.",
+                "Change the whole context state management to recoil state management.",
+                "Worked with Git for version control and code management."
+            ]
+        },
+        {
+            "companyName": "Valuebound",
+            "clientName": "Ensuredit",
+            "from": "2022",
+            "till": "2023",
+            "keyResponsibilities": [
+                "Worked on microservices based architecture for a digital insurance procuring platform.",
+                "Utilized NESTJS as the primary framework.",
+                "Integrated various health insurance APIs into the platform, covering all journey of insurance acquiring process.",
+                "Collaborated with cross-functional teams including design, product, and QA.",
+                "Debugged and resolved production issues in a timely manner.",
+                "Used JIRA for project management and tracking tasks and progress.",
+                "Utilized Postman for testing and debugging API calls.",
+                "Worked with Git for version control and code management."
+            ]
+        },
+        {
+            "companyName": "Valuebound",
+            "clientName": "one place",
+            "from": "2021",
+            "till": "2022",
+            "keyResponsibilities": [
+                "Worked on MERN stack Developer.",
+                "Worked on Redux Toolkit.",
+                "Debugged and resolved production issues in a timely manner.",
+                "Utilized Postman for testing and debugging API calls.",
+                "Worked with Git for version control and code management."
+            ]
+        }
+    ]
+}
